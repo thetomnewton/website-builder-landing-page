@@ -24,7 +24,7 @@ function attemptJoinWaitlist() {
     </div>
 
     <div
-      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_230px)_-50px] bg-no-repeat lg:block pointer-events-none"
+      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_350px)_-50px] bg-no-repeat lg:block pointer-events-none"
     ></div>
     <div class="max-w-[1350px] mx-auto px-8 pb-24 pt-[120px]">
       <div class="flex w-full items-center">
