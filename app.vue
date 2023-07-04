@@ -19,6 +19,10 @@ function attemptJoinWaitlist() {
 
 <template>
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
+    <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden">
+      <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
+    </div>
+
     <div
       class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_230px)_-50px] bg-no-repeat lg:block pointer-events-none"
     ></div>
