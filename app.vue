@@ -11,16 +11,30 @@ useHead({
 })
 
 const formState = ref<'idle' | 'processing' | 'done' | 'error'>('idle')
+const scrolledDown = ref(false)
 
 function attemptJoinWaitlist() {
   formState.value = 'processing'
 }
+
+const listener = () => {
+  if (scrolledDown.value && window.scrollY === 0) scrolledDown.value = false
+  else if (!scrolledDown.value && window.scrollY > 0) scrolledDown.value = true
+}
+
+onMounted(() => document.addEventListener('scroll', listener))
+onUnmounted(() => document.removeEventListener('scroll', listener))
 </script>
 
 <template>
-  <header class="fixed inset-x-0 top-0 z-50">
+  <header
+    class="fixed inset-x-0 top-0 z-50 transition-all"
+    :class="{ 'bg-white/70 backdrop-blur shadow': scrolledDown }"
+  >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
-      <a href="/" class="font-bold py-6 inline-flex text-lg">Logo</a>
+      <a href="/" class="font-bold py-6 inline-flex text-lg">
+        <Logo class="w-[160px]" />
+      </a>
 
       <div class="ml-auto flex items-center">
         <nav>
@@ -47,7 +61,7 @@ function attemptJoinWaitlist() {
     </div>
 
     <div
-      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_370px)_-50px] bg-no-repeat lg:block pointer-events-none"
+      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_370px)_-20px] bg-no-repeat lg:block pointer-events-none"
     ></div>
 
     <div class="max-w-[1350px] mx-auto px-8 pb-24">
@@ -59,7 +73,7 @@ function attemptJoinWaitlist() {
 
           <p class="leading-[30px] text-slate-600 mt-4 max-w-[620px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
-            for financial advisers and created by experts to give your website a perfect starting point.
+            for financial advisers and created by experts to give your website the perfect starting point.
           </p>
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
@@ -109,7 +123,7 @@ function attemptJoinWaitlist() {
       </div>
 
       <div
-        class="lg:flex lg:items-start gap-8 mt-16 max-w-[650px] lg:max-w-none mx-auto lg:mx-0 space-y-8 lg:space-y-0"
+        class="lg:flex lg:items-start gap-8 mt-20 max-w-[650px] lg:max-w-none mx-auto lg:mx-0 space-y-8 lg:space-y-0"
       >
         <div class="lg:w-1/3 flex items-start">
           <div
@@ -137,8 +151,7 @@ function attemptJoinWaitlist() {
             <div class="font-semibold">Easy to customise to match your brand</div>
 
             <p class="text-slate-500 mt-3 leading-6">
-              Use a template as a starter, then easily customise your whole website and its content to match your unique
-              brand.
+              Use a template as a starter, then easily personalise your website to match your unique brand.
             </p>
           </div>
         </div>
@@ -154,8 +167,7 @@ function attemptJoinWaitlist() {
             <div class="font-semibold">Use our content examples, or use AI</div>
 
             <p class="text-slate-500 mt-3 leading-6">
-              Use our content examples throughout your website and articles, or use AI to generate content to match your
-              writing style.
+              Start with our professional content examples, or use AI to generate content to match your writing style.
             </p>
           </div>
         </div>
@@ -163,5 +175,7 @@ function attemptJoinWaitlist() {
     </div>
   </section>
 
-  <section class="bg-white"></section>
+  <section class="bg-white">
+    <div class="max-w-[1350px] mx-auto px-8 py-24"></div>
+  </section>
 </template>
