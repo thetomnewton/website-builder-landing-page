@@ -31,7 +31,7 @@ function attemptJoinWaitlist() {
 
           <p class="leading-[30px] text-slate-600 mt-4 max-w-[620px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
-            for financial advisers and created by experts in web design, accessibility and SEO.
+            for financial advisers and created by experts to give your website a perfect starting point.
           </p>
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
@@ -39,7 +39,7 @@ function attemptJoinWaitlist() {
               Join the waitlist for early access:
             </label>
 
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-4">
               <input
                 id="email"
                 type="email"
@@ -80,8 +80,10 @@ function attemptJoinWaitlist() {
         </div>
       </div>
 
-      <div class="flex items-center gap-8 mt-16">
-        <div class="w-1/3 flex items-start">
+      <div
+        class="lg:flex lg:items-start gap-8 mt-16 max-w-[650px] lg:max-w-none mx-auto lg:mx-0 space-y-8 lg:space-y-0"
+      >
+        <div class="lg:w-1/3 flex items-start">
           <div
             class="mr-6 w-[38px] h-[38px] shadow bg-blue-50 border border-blue-600 rounded-lg flex items-center justify-center"
           >
@@ -91,13 +93,12 @@ function attemptJoinWaitlist() {
           <div class="flex-1">
             <div class="font-semibold">Beautiful hand-crafted templates</div>
             <p class="text-slate-500 mt-3 leading-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, voluptate provident? Tenetur, velit id
-              libero.
+              Use our catalogue of modern and professional templates, designed with your clients in mind.
             </p>
           </div>
         </div>
 
-        <div class="w-1/3 flex items-start">
+        <div class="lg:w-1/3 flex items-start">
           <div
             class="mr-6 w-[38px] h-[38px] shadow bg-blue-50 border border-blue-600 rounded-lg flex items-center justify-center"
           >
@@ -108,13 +109,13 @@ function attemptJoinWaitlist() {
             <div class="font-semibold">Easy to customise to match your brand</div>
 
             <p class="text-slate-500 mt-3 leading-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, voluptate provident? Tenetur, velit id
-              libero.
+              Use a template as a starter, then easily customise your whole website and its content to match your unique
+              brand.
             </p>
           </div>
         </div>
 
-        <div class="w-1/3 flex items-start">
+        <div class="lg:w-1/3 flex items-start">
           <div
             class="mr-6 w-[38px] h-[38px] shadow bg-blue-50 border border-blue-600 rounded-lg flex items-center justify-center"
           >
@@ -125,8 +126,8 @@ function attemptJoinWaitlist() {
             <div class="font-semibold">Use our content examples, or use AI</div>
 
             <p class="text-slate-500 mt-3 leading-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, voluptate provident? Tenetur, velit id
-              libero.
+              Use our content examples throughout your website and articles, or use AI to generate content to match your
+              writing style.
             </p>
           </div>
         </div>
