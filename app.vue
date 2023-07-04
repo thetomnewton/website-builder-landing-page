@@ -18,16 +18,40 @@ function attemptJoinWaitlist() {
 </script>
 
 <template>
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="flex items-center mx-auto max-w-[1350px] px-8">
+      <a href="/" class="font-bold py-6 inline-flex text-lg">Logo</a>
+
+      <div class="ml-auto flex items-center">
+        <nav>
+          <ul class="flex items-center pr-2 mr-6 border-r border-slate-400">
+            <li><a href="#" class="px-4 py-2 text-sm font-semibold">Features</a></li>
+            <li><a href="#" class="px-4 py-2 text-sm font-semibold">About</a></li>
+            <li><a href="#" class="px-4 py-2 text-sm font-semibold">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <button
+          type="button"
+          class="rounded-lg leading-5 text-sm font-semibold bg-transparent appearance-none border-2 border-slate-900 px-3 py-2 text-slate-900"
+        >
+          Join the waitlist
+        </button>
+      </div>
+    </div>
+  </header>
+
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
     <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden">
       <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
     </div>
 
     <div
-      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_350px)_-50px] bg-no-repeat lg:block pointer-events-none"
+      class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/beams.png')] bg-[length:1200px_700px] bg-[position:calc(50%_+_370px)_-50px] bg-no-repeat lg:block pointer-events-none"
     ></div>
-    <div class="max-w-[1350px] mx-auto px-8 pb-24 pt-[120px]">
-      <div class="flex w-full items-center">
+
+    <div class="max-w-[1350px] mx-auto px-8 pb-24">
+      <div class="flex w-full items-center pt-[150px]">
         <div class="max-w-[650px] md:min-w-[650px] mx-auto">
           <h1 class="font-extrabold text-5xl text-slate-950 leading-[50px]">
             Create a beautiful, modern adviser website with complete ease.
@@ -39,7 +63,7 @@ function attemptJoinWaitlist() {
           </p>
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
-            <label for="email" class="block font-semibold mb-2 text-sm text-slate-800">
+            <label for="email" class="inline-block font-semibold mb-2 text-sm text-slate-800">
               Join the waitlist for early access:
             </label>
 
@@ -47,7 +71,7 @@ function attemptJoinWaitlist() {
               <input
                 id="email"
                 type="email"
-                class="text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1"
+                class="text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500"
                 placeholder="email@company.co.uk"
                 autofocus
                 required
@@ -55,7 +79,7 @@ function attemptJoinWaitlist() {
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-4 py-3 bg-slate-900 text-white border border-slate-900 font-semibold shadow inline-flex items-center justify-center appearance-none"
+                class="text-sm rounded-lg leading-5 px-4 py-3 bg-slate-900 text-white border border-slate-900 font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-slate-400"
               >
                 <span>Join the waitlist</span>
               </button>
