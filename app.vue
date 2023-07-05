@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { PaintBrushIcon, SparklesIcon, WrenchScrewdriverIcon } from '@heroicons/vue/24/outline'
+import {
+  BuildingOffice2Icon,
+  PaintBrushIcon,
+  SparklesIcon,
+  WrenchScrewdriverIcon,
+  ComputerDesktopIcon,
+  UsersIcon,
+} from '@heroicons/vue/24/outline'
 
 useHead({
   title: 'Homefront | Professional & modern websites for financial advisers',
@@ -28,6 +35,8 @@ const listener = () => {
 
 onMounted(() => document.addEventListener('scroll', listener))
 onUnmounted(() => document.removeEventListener('scroll', listener))
+
+const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
 </script>
 
 <template>
@@ -71,7 +80,7 @@ onUnmounted(() => document.removeEventListener('scroll', listener))
     <div class="max-w-[1350px] mx-auto px-8 pb-24">
       <div class="flex w-full items-center pt-[150px]">
         <div class="max-w-[650px] md:min-w-[650px] mx-auto">
-          <h1 class="font-extrabold text-5xl text-slate-950 leading-[50px]">
+          <h1 class="font-extrabold text-5xl text-slate-950 leading-[50px] tracking-tight">
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
@@ -155,7 +164,7 @@ onUnmounted(() => document.removeEventListener('scroll', listener))
             <div class="font-semibold">Easy to customise to match your brand</div>
 
             <p class="text-slate-500 mt-3 leading-6">
-              Use a template as a starter, then easily personalise your website to match your unique brand.
+              Use a template as a starter, then easily personalise your website to match your unique brand and voice.
             </p>
           </div>
         </div>
@@ -179,7 +188,172 @@ onUnmounted(() => document.removeEventListener('scroll', listener))
     </div>
   </section>
 
-  <section class="bg-white">
-    <div class="max-w-[1350px] mx-auto px-8 py-24"></div>
+  <section class="bg-white px-8 py-28">
+    <div class="lg:max-w-[1350px] max-w-[650px] mx-auto">
+      <h2
+        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
+      >
+        Choose from pages, sections and content crafted specifically for financial advisers.
+      </h2>
+
+      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
+        A range of precision-built sections for your services, fees, qualifications, newsletters, downloadable guides,
+        meet the team, and more.
+      </p>
+
+      <div class="mt-8 flex items-center flex-wrap mx-auto max-w-[850px]">
+        <div class="w-full flex justify-center lg:hidden mb-8">
+          <div class="rounded-lg bg-slate-200 flex items-center p-0.5 gap-x-1">
+            <button
+              type="button"
+              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
+              :class="{ 'bg-white shadow': selectedPreview === 'modern' }"
+              @click="selectedPreview = 'modern'"
+            >
+              <ComputerDesktopIcon class="w-5 h-5 mr-2" />
+              <span>Modern</span>
+            </button>
+            <button
+              type="button"
+              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
+              :class="{ 'bg-white shadow': selectedPreview === 'corporate' }"
+              @click="selectedPreview = 'corporate'"
+            >
+              <BuildingOffice2Icon class="w-5 h-5 mr-2" />
+              <span>Corporate</span>
+            </button>
+            <button
+              type="button"
+              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
+              :class="{ 'bg-white shadow': selectedPreview === 'family' }"
+              @click="selectedPreview = 'family'"
+            >
+              <UsersIcon class="w-5 h-5 mr-2" />
+              <span>Family</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex flex-col max-w-[340px]">
+          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'modern'">
+            <div
+              class="text-lg flex items-center mb-1 transition-all"
+              :class="[
+                selectedPreview === 'modern'
+                  ? 'text-slate-900 font-semibold'
+                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
+              ]"
+            >
+              <ComputerDesktopIcon class="w-5 h-5 mr-1.5" />
+              <span>Modern</span>
+            </div>
+
+            <p
+              class="transition-all"
+              :class="[selectedPreview === 'modern' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500']"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+            </p>
+          </div>
+
+          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'corporate'">
+            <div
+              class="text-lg flex items-center mb-1 transition-all"
+              :class="[
+                selectedPreview === 'corporate'
+                  ? 'text-slate-900 font-semibold'
+                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
+              ]"
+            >
+              <BuildingOffice2Icon class="w-5 h-5 mr-1.5" />
+              <span>Corporate</span>
+            </div>
+
+            <p
+              class="transition-all"
+              :class="[
+                selectedPreview === 'corporate' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500',
+              ]"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+            </p>
+          </div>
+
+          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'family'">
+            <div
+              class="text-lg flex items-center mb-1 transition-all"
+              :class="[
+                selectedPreview === 'family'
+                  ? 'text-slate-900 font-semibold'
+                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
+              ]"
+            >
+              <UsersIcon class="w-5 h-5 mr-1.5" />
+              <span>Family</span>
+            </div>
+
+            <p
+              class="transition-all"
+              :class="[selectedPreview === 'family' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500']"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-auto lg:flex-1">
+          <div class="rounded-lg ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+            <img :src="`/showcase/${selectedPreview}.png`" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section class="bg-white">
+    <div class="max-w-[1350px] mx-auto px-8 py-24">
+      <h2
+        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
+      >
+        SEO, social sharing, performance, accessibility, all taken care of for you
+      </h2>
+
+      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
+        We have sweat the details on best practices such as Search Engine Optimisation (SEO), accessibility,
+        performance, responsive design for mobile devices, social sharing, image optimisation, security, building for
+        production, and so on, so you don't have to.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="max-w-[1350px] mx-auto px-8 py-24">
+      <h2
+        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
+      >
+        Enjoy powerful analytics from within the Homefront platform
+      </h2>
+
+      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur explicabo blanditiis labore neque velit
+        repellat optio officia.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="max-w-[1350px] mx-auto px-8 py-24">
+      <h2
+        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
+      >
+        Take your firm's digital presence to the next level
+      </h2>
+
+      <p>
+        We have pre-built sections for your services, fees, qualifications, how to find your offices, and many more.
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-slate-50 border-t border-slate-200 py-32"></footer>
 </template>
