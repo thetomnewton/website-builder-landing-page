@@ -165,7 +165,7 @@ const mobileMenuOpen = ref(false)
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-4 py-[13px] bg-gradient-to-tr to-sky-500 from-blue-600 text-white font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-blue-500"
+                class="text-sm rounded-lg leading-5 px-5 py-[13px] bg-gradient-to-tr to-sky-500 from-blue-600 text-white font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-blue-500"
               >
                 <span>Join the waitlist</span>
               </button>
