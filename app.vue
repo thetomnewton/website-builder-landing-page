@@ -423,9 +423,9 @@ const mobileMenuOpen = ref(false)
   </section>
 
   <section class="bg-white">
-    <div class="max-w-[1350px] mx-auto px-8 py-24">
-      <div class="max-w-[600px]">
-        <h2 class="text-slate-900 font-extrabold text-4xl leading-[40px] tracking-tight">
+    <div class="max-w-[1350px] mx-auto px-8 py-16 xl:flex xl:items-center space-y-16 xl:space-y-0">
+      <div class="max-w-[600px] mx-auto xl:mx-0">
+        <h2 class="text-slate-900 font-extrabold text-4xl leading-[40px] tracking-tight text-center xl:text-left">
           Enjoy
           <span class="bg-gradient-to-b from-sky-500 to-blue-700 bg-clip-text text-transparent"
             >powerful analytics</span
@@ -433,10 +433,22 @@ const mobileMenuOpen = ref(false)
           from inside the Homefront platform.
         </h2>
 
-        <p class="text-lg text-slate-700 mt-4">
+        <p class="text-lg text-slate-700 mt-4 text-center xl:text-left">
           Get insights into your traffic, your best performing pages and the most common client journeys throughout your
           website.
         </p>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="relative inline-flex">
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-sky-400 to-blue-600 rounded-lg transform -rotate-3 origin-bottom-left"
+          ></div>
+
+          <div class="relative z-10 overflow-hidden rounded-xl shadow-md ring-1 ring-slate-900/5">
+            <img src="/analytics.svg" class="flex rounded-xl" alt="Analytics" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
