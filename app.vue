@@ -6,6 +6,7 @@ import {
   WrenchScrewdriverIcon,
   ComputerDesktopIcon,
   UsersIcon,
+  Bars3BottomRightIcon,
 } from '@heroicons/vue/24/outline'
 
 useHead({
@@ -37,11 +38,23 @@ onMounted(() => document.addEventListener('scroll', listener))
 onUnmounted(() => document.removeEventListener('scroll', listener))
 
 const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
+const mobileMenuOpen = ref(false)
 </script>
 
 <template>
+  <div
+    class="fixed inset-0 z-40 backdrop-blur transition-all sm:hidden"
+    :class="[mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none']"
+    @click.self.stop="mobileMenuOpen = false"
+  >
+    <div
+      class="fixed inset-y-0 right-0 bg-white min-w-[320px] shadow-md transition-all duration-200 ring-1 ring-slate-900/5"
+      :class="[mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[100%]']"
+    ></div>
+  </div>
+
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-all"
+    class="fixed inset-x-0 top-0 z-30 transition-all"
     :class="{ 'bg-white/70 backdrop-blur shadow-sm': scrolledDown }"
   >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
@@ -49,11 +62,16 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
         <Logo class="w-[160px]" />
       </a>
 
-      <div class="ml-auto flex items-center">
+      <div class="ml-auto sm:hidden">
+        <button type="button" @click="mobileMenuOpen = true">
+          <Bars3BottomRightIcon class="w-6 h-6" />
+        </button>
+      </div>
+
+      <div class="ml-auto items-center hidden sm:flex">
         <nav>
           <ul class="flex items-center pr-2 mr-6 border-r border-slate-400">
             <li><a href="#" class="px-4 py-2 text-sm font-semibold">Features</a></li>
-            <li><a href="#" class="px-4 py-2 text-sm font-semibold">About</a></li>
             <li><a href="#" class="px-4 py-2 text-sm font-semibold">Pricing</a></li>
           </ul>
         </nav>
@@ -319,13 +337,13 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
       <h2
         class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
       >
-        SEO, social sharing, performance, accessibility, all taken care of for you
+        SEO, social sharing, performance, accessibility, all taken care of.
       </h2>
 
       <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
-        We have sweat the details on best practices such as Search Engine Optimisation (SEO), accessibility,
-        performance, responsive design for mobile devices, social sharing, image optimisation, security, building for
-        production, and so on, so you don't have to.
+        We sweat the details on best practices such as Search Engine Optimisation (SEO), accessibility, performance,
+        designing for mobile devices, social sharing, image optimisation, security, building for production, and so on,
+        so you don't have to.
       </p>
     </div>
   </section>
