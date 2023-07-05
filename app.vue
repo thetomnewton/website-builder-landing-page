@@ -16,6 +16,8 @@ import {
   PhotoIcon,
 } from '@heroicons/vue/24/outline'
 
+import { CheckIcon } from '@heroicons/vue/20/solid'
+
 useHead({
   title: 'Homefront | Professional & modern websites for financial advisers',
   meta: [
@@ -34,6 +36,10 @@ const scrolledDown = ref(false)
 
 function attemptJoinWaitlist() {
   formState.value = 'processing'
+
+  setTimeout(() => {
+    formState.value = 'done'
+  }, 1500)
 }
 
 const listener = () => {
@@ -165,9 +171,22 @@ const mobileMenuOpen = ref(false)
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-5 py-[13px] bg-gradient-to-tr to-sky-500 from-blue-600 text-white font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-blue-500"
+                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px]"
+                :class="{
+                  'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
+                  'bg-slate-500 cursor-default': formState === 'processing',
+                  'bg-green-600 cursor-default': formState === 'done',
+                }"
+                :disabled="formState === 'processing' || formState === 'done'"
               >
-                <span>Join the waitlist</span>
+                <span v-if="formState === 'idle'">Join the waitlist</span>
+                <span v-else-if="formState === 'processing'">
+                  <Spinner class="w-6 h-6 text-white animate-spin-slow"
+                /></span>
+                <span v-else-if="formState === 'done'" class="inline-flex items-center space-x-2">
+                  <CheckIcon class="w-6 h-6 text-white -ml-2" />
+                  <span>Done</span>
+                </span>
               </button>
             </div>
           </form>
