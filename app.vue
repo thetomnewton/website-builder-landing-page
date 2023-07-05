@@ -54,7 +54,7 @@ onUnmounted(() => document.removeEventListener('scroll', listener))
 const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
 const mobileMenuOpen = ref(false)
 
-const waitlist = ref(null)
+const waitlist = ref<HTMLElement | null>(null)
 
 function focusWaitlistInput() {
   mobileMenuOpen.value = false
@@ -290,13 +290,13 @@ function focusWaitlistInput() {
         meet the team, and more.
       </p>
 
-      <div class="mt-12 flex items-center flex-wrap mx-auto max-w-[1000px]">
+      <div class="mt-10 flex items-center flex-wrap mx-auto max-w-[1000px]">
         <div class="w-full flex justify-center lg:hidden mb-8">
-          <div class="rounded-lg bg-slate-200 flex items-center p-0.5 gap-x-1">
+          <div class="rounded-full border border-slate-300 flex items-center p-1 gap-x-1">
             <button
               type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
-              :class="{ 'bg-white shadow': selectedPreview === 'modern' }"
+              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
+              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'modern' }"
               @click="selectedPreview = 'modern'"
             >
               <ComputerDesktopIcon class="w-5 h-5 mr-2" />
@@ -305,8 +305,8 @@ function focusWaitlistInput() {
 
             <button
               type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
-              :class="{ 'bg-white shadow': selectedPreview === 'corporate' }"
+              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
+              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'corporate' }"
               @click="selectedPreview = 'corporate'"
             >
               <BuildingOffice2Icon class="w-5 h-5 mr-2" />
@@ -315,8 +315,8 @@ function focusWaitlistInput() {
 
             <button
               type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
-              :class="{ 'bg-white shadow': selectedPreview === 'family' }"
+              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
+              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'family' }"
               @click="selectedPreview = 'family'"
             >
               <UsersIcon class="w-5 h-5 mr-2" />
