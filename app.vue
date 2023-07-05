@@ -84,9 +84,9 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
-          <p class="leading-[30px] text-slate-600 mt-4 max-w-[620px] text-lg">
+          <p class="leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
-            for financial advisers and created by experts to give your website the perfect starting point.
+            for financial advisers and created by experts.
           </p>
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
@@ -197,11 +197,11 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
       </h2>
 
       <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
-        A range of precision-built sections for your services, fees, qualifications, newsletters, downloadable guides,
+        A range of precision-built sections for your services, fees, qualifications, testimonials, downloadable guides,
         meet the team, and more.
       </p>
 
-      <div class="mt-8 flex items-center flex-wrap mx-auto max-w-[850px]">
+      <div class="mt-12 flex items-center flex-wrap mx-auto max-w-[1000px]">
         <div class="w-full flex justify-center lg:hidden mb-8">
           <div class="rounded-lg bg-slate-200 flex items-center p-0.5 gap-x-1">
             <button
@@ -213,6 +213,7 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
               <ComputerDesktopIcon class="w-5 h-5 mr-2" />
               <span>Modern</span>
             </button>
+
             <button
               type="button"
               class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
@@ -222,6 +223,7 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
               <BuildingOffice2Icon class="w-5 h-5 mr-2" />
               <span>Corporate</span>
             </button>
+
             <button
               type="button"
               class="inline-flex items-center appearance-none text-sm font-medium px-2 py-1 rounded-md"
@@ -234,7 +236,9 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
           </div>
         </div>
 
-        <div class="hidden lg:flex flex-col max-w-[340px]">
+        <div class="hidden lg:flex flex-col max-w-[340px] -mt-5">
+          <div class="text-slate-700 text-sm ml-4">Example websites:</div>
+
           <div class="p-4 cursor-pointer group" @click="selectedPreview = 'modern'">
             <div
               class="text-lg flex items-center mb-1 transition-all"
@@ -250,9 +254,9 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'modern' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500']"
+              :class="[selectedPreview === 'modern' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500']"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+              Impress your clients with a sleek and modern impression.
             </p>
           </div>
 
@@ -272,10 +276,10 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
             <p
               class="transition-all"
               :class="[
-                selectedPreview === 'corporate' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500',
+                selectedPreview === 'corporate' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500',
               ]"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+              Demonstrate your professionalism and industry expertise to your clients.
             </p>
           </div>
 
@@ -294,9 +298,9 @@ const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'family' ? 'text-slate-600' : 'text-slate-400 group-hover:text-slate-500']"
+              :class="[selectedPreview === 'family' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500']"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, qui.
+              For firms wanting a more family-focused and goal-oriented feel.
             </p>
           </div>
         </div>
