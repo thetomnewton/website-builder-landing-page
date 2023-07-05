@@ -395,7 +395,7 @@ const mobileMenuOpen = ref(false)
 
   <section class="bg-white">
     <div class="max-w-[1350px] mx-auto px-8 py-16">
-      <h3 class="text-slate-950 max-w-[780px] text-3xl font-bold text-center mx-auto tracking-tight">
+      <h3 class="text-slate-950 max-w-[780px] text-2xl md:text-3xl font-bold text-center mx-auto tracking-tight">
         We've sweat the details on website best practices, so that you don't have to. Performance, accessibility,
         security and more, taken care of out of the box.
       </h3>
@@ -445,7 +445,9 @@ const mobileMenuOpen = ref(false)
   <section class="bg-white">
     <div class="max-w-[1350px] mx-auto px-8 py-16 xl:flex xl:items-center space-y-16 xl:space-y-0">
       <div class="max-w-[600px] mx-auto xl:mx-0">
-        <h2 class="text-slate-900 font-extrabold text-4xl leading-[40px] tracking-tight text-center xl:text-left">
+        <h2
+          class="text-slate-900 font-extrabold text-3xl md:text-4xl leading-[40px] tracking-tight text-center xl:text-left"
+        >
           Enjoy
           <span class="bg-gradient-to-b from-sky-500 to-blue-700 bg-clip-text text-transparent"
             >powerful analytics</span
