@@ -22,6 +22,7 @@ useHead({
   title: 'Homefront | Professional & modern websites for financial advisers',
   meta: [
     { name: 'description', content: 'Build a modern and beautiful website for your financial advice firm with ease' },
+    { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
   ],
   htmlAttrs: {
     class: 'h-full',
