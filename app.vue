@@ -150,7 +150,7 @@ const mobileMenuOpen = ref(false)
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
-          <p class="leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
+          <p class="md:leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
             for financial advisers and created by experts.
           </p>
