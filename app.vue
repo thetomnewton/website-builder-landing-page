@@ -8,6 +8,12 @@ import {
   UsersIcon,
   Bars3BottomRightIcon,
   XMarkIcon,
+  MagnifyingGlassIcon,
+  DocumentDuplicateIcon,
+  ShieldCheckIcon,
+  UserGroupIcon,
+  ShareIcon,
+  PhotoIcon,
 } from '@heroicons/vue/24/outline'
 
 useHead({
@@ -368,18 +374,51 @@ const mobileMenuOpen = ref(false)
   </section>
 
   <section class="bg-white">
-    <div class="max-w-[1350px] mx-auto px-8 py-24">
-      <h2
-        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
-      >
-        SEO, social sharing, performance, accessibility, all taken care of.
-      </h2>
+    <div class="max-w-[1350px] mx-auto px-8 py-16">
+      <h3 class="text-slate-950 max-w-[780px] text-3xl font-[500] text-center mx-auto tracking-tight">
+        We've sweat the details on website best practices, so that you don't have to. Performance, accessibility,
+        security and more, taken care of out of the box.
+      </h3>
 
-      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
-        We sweat the details on best practices such as Search Engine Optimisation (SEO), accessibility, performance,
-        designing for mobile devices, social sharing, image optimisation, security, building for production, and so on,
-        so you don't have to.
-      </p>
+      <div
+        class="mt-12 lg:flex flex-wrap text-slate-500 font-medium leading-6 max-w-[700px] mx-auto lg:max-w-none space-y-4 lg:space-y-0"
+      >
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+          <MagnifyingGlassIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Search Engine Optimisation (SEO)</span>
+          <span>. Best practices to help you rank better in Google.</span>
+        </div>
+
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+          <PhotoIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Image optimisation</span>
+          <span>. Any images you upload will be adjusted for peak performance.</span>
+        </div>
+
+        <div class="lg:w-1/3 lg:px-4 lg:py-3">
+          <ShareIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Social media sharing previews</span>
+          <span>. Your site will look great, no matter where it gets shared.</span>
+        </div>
+
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+          <UserGroupIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Accessibility</span>
+          <span>. Your site will follow accessibility best practices and be welcoming for all.</span>
+        </div>
+
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+          <ShieldCheckIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Security</span>
+          <span>. Get automatic HTTPS included and spam protection on your contact forms.</span>
+        </div>
+
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+          <DocumentDuplicateIcon class="text-black inline w-5 h-5 mr-1.5" />
+          <span class="text-black">Multiple versions</span>
+          <span>. Keep your current site up and running while working on a new one.</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -406,11 +445,11 @@ const mobileMenuOpen = ref(false)
         Take your firm's digital presence to the next level
       </h2>
 
-      <p>
+      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
         We have pre-built sections for your services, fees, qualifications, how to find your offices, and many more.
       </p>
     </div>
   </section>
 
-  <footer class="bg-slate-50 border-t border-slate-200 py-32"></footer>
+  <footer class="bg-slate-50 border-t border-slate-200 py-10"></footer>
 </template>
