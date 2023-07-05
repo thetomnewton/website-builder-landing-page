@@ -58,7 +58,7 @@ const mobileMenuOpen = ref(false)
     :class="{ 'bg-white/70 backdrop-blur shadow-sm': scrolledDown }"
   >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
-      <a href="/" class="font-bold py-6 inline-flex text-lg">
+      <a href="#" class="font-bold py-6 inline-flex text-lg">
         <Logo class="w-[160px]" />
       </a>
 
@@ -71,8 +71,8 @@ const mobileMenuOpen = ref(false)
       <div class="ml-auto items-center hidden sm:flex">
         <nav>
           <ul class="flex items-center pr-2 mr-6 border-r border-slate-400">
-            <li><a href="#" class="px-4 py-2 text-sm font-semibold">Features</a></li>
-            <li><a href="#" class="px-4 py-2 text-sm font-semibold">Pricing</a></li>
+            <li><a href="#features" class="px-4 py-2 text-sm font-semibold">Features</a></li>
+            <li><a href="#pricing" class="px-4 py-2 text-sm font-semibold">Pricing</a></li>
           </ul>
         </nav>
 
@@ -206,7 +206,7 @@ const mobileMenuOpen = ref(false)
     </div>
   </section>
 
-  <section class="bg-white px-8 py-28">
+  <section id="features" class="bg-white px-8 py-28">
     <div class="lg:max-w-[1350px] max-w-[650px] mx-auto">
       <h2
         class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
@@ -363,7 +363,7 @@ const mobileMenuOpen = ref(false)
     </div>
   </section>
 
-  <section class="bg-white">
+  <section id="pricing" class="bg-white">
     <div class="max-w-[1350px] mx-auto px-8 py-24">
       <h2
         class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
