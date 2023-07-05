@@ -324,7 +324,7 @@ const mobileMenuOpen = ref(false)
         </div>
 
         <div class="w-full lg:w-auto lg:flex-1">
-          <div class="rounded-lg ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+          <div class="rounded-xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
             <img :src="`/showcase/${selectedPreview}.png`" alt="" />
           </div>
         </div>
