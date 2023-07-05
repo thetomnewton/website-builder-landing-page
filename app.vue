@@ -86,7 +86,7 @@ const mobileMenuOpen = ref(false)
       <div class="px-5 py-4">
         <button
           type="button"
-          class="flex w-full items-center justify-center appearance-none rounded-lg font-semibold text-slate-900 border-2 border-slate-900 px-3 py-2"
+          class="flex w-full items-center justify-center appearance-none rounded-lg font-semibold text-blue-600 border-2 border-blue-600 px-3 py-2"
         >
           Join the waitlist
         </button>
@@ -119,7 +119,7 @@ const mobileMenuOpen = ref(false)
 
         <button
           type="button"
-          class="rounded-lg leading-5 text-sm font-semibold bg-transparent appearance-none border-2 border-slate-900 px-3 py-2 text-slate-900"
+          class="rounded-lg leading-5 text-sm font-semibold bg-transparent appearance-none border-2 border-blue-600 px-3 py-2 text-blue-600"
         >
           Join the waitlist
         </button>
@@ -165,7 +165,7 @@ const mobileMenuOpen = ref(false)
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-4 py-3 bg-slate-900 text-white border border-slate-900 font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-slate-400"
+                class="text-sm rounded-lg leading-5 px-4 py-[13px] bg-gradient-to-tr to-sky-500 from-blue-600 text-white font-semibold shadow inline-flex items-center justify-center appearance-none outline-none focus:ring-2 ring-blue-500"
               >
                 <span>Join the waitlist</span>
               </button>
