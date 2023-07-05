@@ -174,7 +174,7 @@ function focusWaitlistInput() {
                 id="email"
                 ref="waitlist"
                 type="email"
-                class="text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
                 autofocus
                 required
