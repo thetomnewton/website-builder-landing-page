@@ -2,6 +2,10 @@
 import { PaintBrushIcon, SparklesIcon, WrenchScrewdriverIcon } from '@heroicons/vue/24/outline'
 
 useHead({
+  title: 'Homefront | Professional & modern websites for financial advisers',
+  meta: [
+    { name: 'description', content: 'Build a modern and beautiful website for your financial advice firm with ease' },
+  ],
   htmlAttrs: {
     class: 'h-full',
   },
@@ -29,7 +33,7 @@ onUnmounted(() => document.removeEventListener('scroll', listener))
 <template>
   <header
     class="fixed inset-x-0 top-0 z-50 transition-all"
-    :class="{ 'bg-white/70 backdrop-blur shadow': scrolledDown }"
+    :class="{ 'bg-white/70 backdrop-blur shadow-sm': scrolledDown }"
   >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
       <a href="/" class="font-bold py-6 inline-flex text-lg">
