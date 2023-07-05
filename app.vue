@@ -7,6 +7,7 @@ import {
   ComputerDesktopIcon,
   UsersIcon,
   Bars3BottomRightIcon,
+  XMarkIcon,
 } from '@heroicons/vue/24/outline'
 
 useHead({
@@ -50,7 +51,41 @@ const mobileMenuOpen = ref(false)
     <div
       class="fixed inset-y-0 right-0 bg-white min-w-[320px] shadow-md transition-all duration-200 ring-1 ring-slate-900/5"
       :class="[mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[100%]']"
-    ></div>
+    >
+      <div class="flex items-center px-5 py-4">
+        <LogoIcon class="w-11 pl-2 py-1" />
+
+        <button type="button" class="ml-auto p-2" @click="mobileMenuOpen = false">
+          <XMarkIcon class="w-6 h-6" />
+        </button>
+      </div>
+
+      <div class="px-5 py-3">
+        <nav>
+          <ul>
+            <li>
+              <a href="#features" @click="mobileMenuOpen = false" class="font-semibold text-slate-800 px-2 py-1 block"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#pricing" @click="mobileMenuOpen = false" class="font-semibold text-slate-800 px-2 py-1 block"
+                >Pricing</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="px-5 py-4">
+        <button
+          type="button"
+          class="flex w-full items-center justify-center appearance-none rounded-lg font-semibold text-slate-900 border-2 border-slate-900 px-3 py-2"
+        >
+          Join the waitlist
+        </button>
+      </div>
+    </div>
   </div>
 
   <header
@@ -324,7 +359,7 @@ const mobileMenuOpen = ref(false)
         </div>
 
         <div class="w-full lg:w-auto lg:flex-1">
-          <div class="rounded-xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+          <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
             <img :src="`/showcase/${selectedPreview}.png`" alt="" />
           </div>
         </div>
