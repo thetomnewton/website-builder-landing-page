@@ -343,7 +343,7 @@ function focusWaitlistInput() {
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'modern' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500']"
+              :class="[selectedPreview === 'modern' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600']"
             >
               Impress your clients with a sleek and modern impression.
             </p>
@@ -365,7 +365,7 @@ function focusWaitlistInput() {
             <p
               class="transition-all"
               :class="[
-                selectedPreview === 'corporate' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500',
+                selectedPreview === 'corporate' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600',
               ]"
             >
               Demonstrate your professionalism and industry expertise to your clients.
@@ -387,7 +387,7 @@ function focusWaitlistInput() {
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'family' ? 'text-slate-700' : 'text-slate-400 group-hover:text-slate-500']"
+              :class="[selectedPreview === 'family' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600']"
             >
               For firms wanting a more family-focused and goal-oriented feel.
             </p>
