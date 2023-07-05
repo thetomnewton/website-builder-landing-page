@@ -135,7 +135,7 @@ const mobileMenuOpen = ref(false)
   </header>
 
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
-    <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden">
+    <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden pointer-events-none">
       <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
     </div>
 
@@ -144,9 +144,9 @@ const mobileMenuOpen = ref(false)
     ></div>
 
     <div class="max-w-[1350px] mx-auto px-8 pb-24">
-      <div class="flex w-full items-center pt-[150px]">
+      <div class="flex w-full items-center md:pt-[150px] pt-[120px]">
         <div class="max-w-[650px] md:min-w-[650px] mx-auto">
-          <h1 class="font-extrabold text-5xl text-slate-950 leading-[50px] tracking-tight">
+          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-950 lg:leading-[50px] tracking-tight">
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
@@ -160,11 +160,11 @@ const mobileMenuOpen = ref(false)
               Join the waitlist for early access:
             </label>
 
-            <div class="flex items-center space-x-4">
+            <div class="md:flex md:items-center md:space-x-4">
               <input
                 id="email"
                 type="email"
-                class="text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500"
+                class="text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
                 autofocus
                 required
@@ -172,7 +172,7 @@ const mobileMenuOpen = ref(false)
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px]"
+                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px] mt-4 md:mt-0"
                 :class="{
                   'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
                   'bg-slate-500 cursor-default': formState === 'processing',
@@ -270,7 +270,7 @@ const mobileMenuOpen = ref(false)
   <section id="features" class="bg-white px-8 py-28">
     <div class="lg:max-w-[1350px] max-w-[650px] mx-auto">
       <h2
-        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
+        class="text-slate-950 font-extrabold text-center text-3xl md:text-4xl max-w-[720px] mx-auto md:leading-[40px] tracking-tight"
       >
         Choose from pages, sections and content crafted specifically for financial advisers.
       </h2>
