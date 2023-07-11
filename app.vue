@@ -170,7 +170,7 @@ function focusWaitlistInput() {
                 id="email"
                 ref="waitlist"
                 type="email"
-                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow border border-slate-200 flex-1 outline-none focus:ring-2 ring-blue-500 focus:border-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/5 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
                 autofocus
                 required
@@ -467,7 +467,7 @@ function focusWaitlistInput() {
         </p>
       </div>
 
-      <div class="flex justify-center">
+      <div class="flex justify-center xl:pl-8 xl:flex-1">
         <div class="relative inline-flex">
           <div
             class="absolute inset-0 bg-gradient-to-tr from-sky-400 to-blue-600 rounded-lg transform -rotate-3 origin-bottom-left"
@@ -475,6 +475,53 @@ function focusWaitlistInput() {
 
           <div class="relative z-10 overflow-hidden rounded-xl shadow-md ring-1 ring-slate-900/5">
             <img src="/analytics.svg" class="flex rounded-xl" alt="Analytics" width="587" height="486" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-8 pb-20">
+    <div class="px-8 max-w-[1300px] mx-auto">
+      <div class="px-12 py-8 bg-white shadow-md rounded-3xl ring-1 ring-slate-950/10">
+        <div class="xl:flex xl:items-center">
+          <div class="xl:pr-10">
+            <div class="font-medium text-lg">Grow your business with a stunning, modern Advicehome website.</div>
+            <div class="font-medium text-lg text-slate-500">Join the waitlist for early access.</div>
+          </div>
+
+          <div class="mt-6 xl:mt-0 xl:ml-auto flex-1">
+            <form @submit.prevent="attemptJoinWaitlist" class="md:flex md:items-center md:space-x-4">
+              <input
+                id="email"
+                ref="waitlist"
+                type="email"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/10 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
+                placeholder="email@company.co.uk"
+                autofocus
+                required
+              />
+
+              <button
+                type="submit"
+                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px] mt-4 md:mt-0"
+                :class="{
+                  'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
+                  'bg-slate-500 cursor-default': formState === 'processing',
+                  'bg-green-600 cursor-default': formState === 'done',
+                }"
+                :disabled="formState === 'processing' || formState === 'done'"
+              >
+                <span v-if="formState === 'idle'">Join the waitlist</span>
+                <span v-else-if="formState === 'processing'">
+                  <Spinner class="w-6 h-6 text-white animate-spin-slow"
+                /></span>
+                <span v-else-if="formState === 'done'" class="inline-flex items-center space-x-2">
+                  <CheckIcon class="w-6 h-6 text-white -ml-2" />
+                  <span>Done</span>
+                </span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
