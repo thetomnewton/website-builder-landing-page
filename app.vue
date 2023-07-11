@@ -88,11 +88,6 @@ function focusWaitlistInput() {
                 >Features</a
               >
             </li>
-            <li>
-              <a href="#pricing" @click="mobileMenuOpen = false" class="font-semibold text-slate-800 px-2 py-1 block"
-                >Pricing</a
-              >
-            </li>
           </ul>
         </nav>
       </div>
@@ -128,7 +123,6 @@ function focusWaitlistInput() {
         <nav>
           <ul class="flex items-center pr-2 mr-6 border-r border-slate-400">
             <li><a href="#features" class="px-4 py-2 text-sm font-semibold">Features</a></li>
-            <li><a href="#pricing" class="px-4 py-2 text-sm font-semibold">Pricing</a></li>
           </ul>
         </nav>
 
@@ -453,7 +447,7 @@ function focusWaitlistInput() {
   </section>
 
   <section class="bg-white">
-    <div class="max-w-[1350px] mx-auto px-8 py-16 xl:flex xl:items-center space-y-16 xl:space-y-0">
+    <div class="max-w-[1350px] mx-auto px-8 py-20 xl:flex xl:items-center space-y-16 xl:space-y-0">
       <div class="max-w-[600px] mx-auto xl:mx-0">
         <h2
           class="text-slate-900 font-extrabold text-3xl md:text-4xl leading-[40px] tracking-tight text-center xl:text-left"
@@ -485,19 +479,7 @@ function focusWaitlistInput() {
     </div>
   </section>
 
-  <section id="pricing" class="bg-white">
-    <div class="max-w-[1350px] mx-auto px-8 py-24">
-      <h2
-        class="text-slate-950 font-extrabold text-center text-4xl max-w-[720px] mx-auto leading-[40px] tracking-tight"
-      >
-        Take your firm's digital presence to the next level.
-      </h2>
-
-      <p class="text-center text-lg text-slate-700 mt-4 max-w-[700px] mx-auto">
-        We have pre-built sections for your services, fees, qualifications, how to find your offices, and many more.
-      </p>
-    </div>
-  </section>
-
-  <footer class="bg-slate-50 border-t border-slate-200 py-10"></footer>
+  <footer class="bg-slate-50 border-t border-slate-200 text-[13px] text-slate-500">
+    <div class="max-w-[1350px] mx-auto px-8 py-6">&copy; 2023 Advicehome</div>
+  </footer>
 </template>
