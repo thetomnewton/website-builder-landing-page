@@ -141,13 +141,7 @@ function focusWaitlistInput() {
 
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
     <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden pointer-events-none">
-      <img
-        src="/beams-simple.png"
-        alt=""
-        class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none"
-        width="587"
-        height="486"
-      />
+      <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
     </div>
 
     <div
@@ -480,7 +474,7 @@ function focusWaitlistInput() {
           ></div>
 
           <div class="relative z-10 overflow-hidden rounded-xl shadow-md ring-1 ring-slate-900/5">
-            <img src="/analytics.svg" class="flex rounded-xl" alt="Analytics" />
+            <img src="/analytics.svg" class="flex rounded-xl" alt="Analytics" width="587" height="486" />
           </div>
         </div>
       </div>
