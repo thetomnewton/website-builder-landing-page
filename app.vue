@@ -119,6 +119,7 @@ function focusWaitlistInput() {
       <div class="ml-auto sm:hidden">
         <button type="button" @click="mobileMenuOpen = true">
           <Bars3BottomRightIcon class="w-6 h-6" />
+          <span class="sr-only">Menu</span>
         </button>
       </div>
 
