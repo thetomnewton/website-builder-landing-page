@@ -482,12 +482,14 @@ function focusWaitlistInput() {
   </section>
 
   <section class="pt-8 pb-20">
-    <div class="px-8 max-w-[1300px] mx-auto">
+    <div class="max-w-screen-xl mx-auto">
       <div class="px-12 py-8 bg-white shadow-md rounded-3xl ring-1 ring-slate-950/10">
         <div class="xl:flex xl:items-center">
           <div class="xl:pr-10">
             <div class="font-medium text-lg">Grow your business with a stunning, modern Advicehome website.</div>
-            <div class="font-medium text-lg text-slate-500">Join the waitlist for early access.</div>
+            <div class="font-medium text-lg text-slate-500">
+              Join the waitlist for early access and product updates.
+            </div>
           </div>
 
           <div class="mt-6 xl:mt-0 xl:ml-auto flex-1">
@@ -504,7 +506,7 @@ function focusWaitlistInput() {
 
               <button
                 type="submit"
-                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px] mt-4 md:mt-0"
+                class="text-sm rounded-lg leading-5 px-5 py-[13px] text-white font-semibold inline-flex items-center justify-center appearance-none outline-none w-[150px] max-h-[46px] mt-6 md:mt-0"
                 :class="{
                   'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
                   'bg-slate-500 cursor-default': formState === 'processing',
