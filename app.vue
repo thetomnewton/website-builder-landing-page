@@ -495,7 +495,7 @@ function focusWaitlistInput() {
           <div class="mt-6 xl:mt-0 xl:ml-auto flex-1">
             <form @submit.prevent="attemptJoinWaitlist" class="md:flex md:items-center md:space-x-4">
               <input
-                id="email"
+                id="email-lower"
                 ref="waitlist"
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/10 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
