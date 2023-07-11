@@ -411,7 +411,7 @@ function focusWaitlistInput() {
       </h3>
 
       <div
-        class="mt-16 lg:flex flex-wrap text-slate-500 font-medium leading-6 max-w-[700px] mx-auto lg:max-w-none space-y-4 lg:space-y-0"
+        class="mt-16 lg:flex flex-wrap text-slate-500 font-medium leading-6 max-w-[700px] mx-auto lg:max-w-none space-y-6 lg:space-y-0"
       >
         <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <MagnifyingGlassIcon class="text-black inline w-5 h-5 mr-1.5" />
@@ -422,7 +422,7 @@ function focusWaitlistInput() {
         <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <PhotoIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Image optimisation</span>
-          <span>. Any images you use will be adjusted for peak performance.</span>
+          <span>. Any images you use will be auto-adjusted for peak performance.</span>
         </div>
 
         <div class="lg:w-1/3 lg:px-4 lg:py-3">
