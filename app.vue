@@ -141,7 +141,13 @@ function focusWaitlistInput() {
 
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
     <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden pointer-events-none">
-      <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
+      <img
+        src="/beams-simple.png"
+        alt=""
+        class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none"
+        width="587"
+        height="486"
+      />
     </div>
 
     <div
@@ -392,7 +398,7 @@ function focusWaitlistInput() {
 
         <div class="w-full lg:w-auto lg:flex-1">
           <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
-            <img :src="`/showcase/${selectedPreview}.png`" alt="" />
+            <img :src="`/showcase/${selectedPreview}.png`" alt="Showcase image" width="660" height="645" />
           </div>
         </div>
       </div>
