@@ -113,6 +113,7 @@ function focusWaitlistInput() {
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
       <a href="#" class="font-bold py-6 inline-flex text-lg" alt="Logo">
         <Logo class="w-[140px] md:w-[160px]" />
+        <span class="sr-only">Advicehome</span>
       </a>
 
       <div class="ml-auto sm:hidden">
