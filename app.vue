@@ -78,6 +78,7 @@ function focusWaitlistInput() {
 
         <button type="button" class="ml-auto p-2" @click="mobileMenuOpen = false">
           <XMarkIcon class="w-6 h-6" />
+          <span class="sr-only">Close</span>
         </button>
       </div>
 
@@ -110,7 +111,7 @@ function focusWaitlistInput() {
     :class="{ 'bg-white/50 backdrop-blur shadow-sm': scrolledDown }"
   >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
-      <a href="#" class="font-bold py-6 inline-flex text-lg">
+      <a href="#" class="font-bold py-6 inline-flex text-lg" alt="Logo">
         <Logo class="w-[140px] md:w-[160px]" />
       </a>
 
