@@ -19,7 +19,7 @@ import {
 import { CheckIcon } from '@heroicons/vue/20/solid'
 
 useHead({
-  title: 'Homefront | Professional & modern websites for financial advisers',
+  title: 'Advicehome | Professional & modern websites for financial advisers',
   meta: [
     { name: 'description', content: 'Build a modern and beautiful website for your financial advice firm with ease' },
     { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
@@ -462,7 +462,7 @@ function focusWaitlistInput() {
           <span class="bg-gradient-to-b from-sky-500 to-blue-700 bg-clip-text text-transparent"
             >powerful analytics</span
           >
-          from inside the Homefront platform.
+          from inside the Advicehome platform.
         </h2>
 
         <p class="text-lg text-slate-700 mt-4 text-center xl:text-left">
