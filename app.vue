@@ -59,7 +59,7 @@ async function attemptJoinWaitlist() {
 
   try {
     await fetch('https://api.advicehome.co.uk/sanctum/csrf-cookie', { method: 'post' })
-    await fetch('https://api.advicehome.co.uk/waitlist/join', {
+    await fetch('https://api.advicehome.co.uk/api/waitlist/join', {
       method: 'post',
       credentials: 'include',
       body: JSON.stringify({
