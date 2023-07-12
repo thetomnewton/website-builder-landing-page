@@ -62,6 +62,9 @@ async function attemptJoinWaitlist() {
     await fetch('https://api.advicehome.co.uk/api/waitlist/join', {
       method: 'post',
       credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         email: email.value,
       }),
