@@ -16,7 +16,7 @@ import {
   PhotoIcon,
 } from '@heroicons/vue/24/outline'
 
-import { CheckIcon } from '@heroicons/vue/20/solid'
+import { CheckIcon, ExclamationCircleIcon } from '@heroicons/vue/20/solid'
 
 const email = ref('')
 
@@ -57,17 +57,19 @@ const scrolledDown = ref(false)
 async function attemptJoinWaitlist() {
   formState.value = 'processing'
 
-  await fetch('https://api.advicehome.co.uk/csrf-cookie', { method: 'post' })
-
-  await fetch('https://api.advicehome.co.uk/waitlist/join', {
-    method: 'post',
-    credentials: 'include',
-    body: JSON.stringify({
-      email: email.value,
-    }),
-  })
-
-  formState.value = 'done'
+  try {
+    await fetch('https://api.advicehome.co.uk/csrf-cookie', { method: 'post' })
+    await fetch('https://api.advicehome.co.uk/waitlist/join', {
+      method: 'post',
+      credentials: 'include',
+      body: JSON.stringify({
+        email: email.value,
+      }),
+    })
+    formState.value = 'done'
+  } catch (e) {
+    formState.value = 'error'
+  }
 }
 
 const listener = () => {
@@ -210,6 +212,7 @@ function focusWaitlistInput() {
                 :class="{
                   'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
                   'bg-slate-500 cursor-default': formState === 'processing',
+                  'bg-red-500': formState === 'error',
                   'bg-green-600 cursor-default': formState === 'done',
                 }"
                 :disabled="formState === 'processing' || formState === 'done'"
@@ -218,6 +221,10 @@ function focusWaitlistInput() {
                 <span v-else-if="formState === 'processing'">
                   <Spinner class="w-6 h-6 text-white animate-spin-slow"
                 /></span>
+                <span v-else-if="formState === 'error'" class="inline-flex items-center space-x-2">
+                  <ExclamationCircleIcon class="w-6 h-6 text-white -ml-2" />
+                  <span>Error</span>
+                </span>
                 <span v-else-if="formState === 'done'" class="inline-flex items-center space-x-2">
                   <CheckIcon class="w-6 h-6 text-white -ml-2" />
                   <span>Done</span>
