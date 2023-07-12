@@ -172,7 +172,7 @@ function focusWaitlistInput() {
                 id="email"
                 ref="waitlist"
                 type="email"
-                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/5 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/5 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
                 required
               />
@@ -501,7 +501,7 @@ function focusWaitlistInput() {
                 id="email-lower"
                 ref="waitlist"
                 type="email"
-                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/10 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/10 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
                 required
               />
