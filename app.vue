@@ -200,6 +200,8 @@ function focusWaitlistInput() {
                 id="email"
                 ref="waitlist"
                 v-model="email"
+                @focus="formState = 'idle'"
+                @input="formState = 'idle'"
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/5 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
@@ -212,10 +214,10 @@ function focusWaitlistInput() {
                 :class="{
                   'bg-gradient-to-tr to-sky-500 from-blue-600 focus:ring-2 ring-blue-500 shadow': formState === 'idle',
                   'bg-slate-500 cursor-default': formState === 'processing',
-                  'bg-red-500': formState === 'error',
+                  'bg-red-500 cursor-default': formState === 'error',
                   'bg-green-600 cursor-default': formState === 'done',
                 }"
-                :disabled="formState === 'processing' || formState === 'done'"
+                :disabled="formState === 'processing' || formState === 'error' || formState === 'done'"
               >
                 <span v-if="formState === 'idle'">Join the waitlist</span>
                 <span v-else-if="formState === 'processing'">
@@ -535,6 +537,8 @@ function focusWaitlistInput() {
                 id="email-lower"
                 ref="waitlist"
                 v-model="email"
+                @focus="formState = 'idle'"
+                @input="formState = 'idle'"
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/10 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
