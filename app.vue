@@ -484,11 +484,13 @@ function focusWaitlistInput() {
   </section>
 
   <section class="pt-8 pb-20">
-    <div class="max-w-screen-xl mx-auto">
-      <div class="px-12 py-8 bg-white shadow-md rounded-3xl ring-1 ring-slate-950/10">
+    <div class="max-w-[1300px] mx-auto px-8 xl:px-0">
+      <div
+        class="px-12 py-8 bg-gradient-to-b from-white to-slate-50 via-white shadow-md rounded-3xl ring-1 ring-slate-950/10"
+      >
         <div class="xl:flex xl:items-center">
           <div class="xl:pr-10">
-            <div class="font-medium text-lg">Grow your business with a stunning, modern Advicehome website.</div>
+            <div class="font-medium text-lg">Grow your business with a stunning Advicehome website.</div>
             <div class="font-medium text-lg text-slate-500">
               Join the waitlist for early access and product updates.
             </div>
@@ -533,6 +535,19 @@ function focusWaitlistInput() {
   </section>
 
   <footer class="bg-slate-50 border-t border-slate-200 text-[13px] text-slate-500">
-    <div class="max-w-[1350px] mx-auto px-8 py-6">&copy; 2023 Advicehome</div>
+    <div class="max-w-[1350px] mx-auto px-8 py-8 flex items-center">
+      <div class="">
+        <svg viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-slate-500 w-8">
+          <path
+            d="M16 8C15.5 7 10 2.5 9 2.5C7.99999 2.5 2.5 7 2 8C1.5 9 1 16 2.5 17.5C4 19 14 19 15.5 17.5C17 16 16.5 9 16 8Z"
+            stroke="currentColor"
+            stroke-width="1.3"
+          />
+          <rect x="6" y="14.2" width="6" height="1.3" rx="0.9" fill="currentColor" />
+        </svg>
+      </div>
+
+      <div class="ml-auto">&copy; 2023 Advicehome</div>
+    </div>
   </footer>
 </template>
