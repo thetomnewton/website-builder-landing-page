@@ -18,6 +18,8 @@ import {
 
 import { CheckIcon } from '@heroicons/vue/20/solid'
 
+const email = ref('')
+
 useHead({
   title: 'Advicehome | Professional & modern websites for financial advisers',
   meta: [
@@ -52,12 +54,20 @@ useHead({
 const formState = ref<'idle' | 'processing' | 'done' | 'error'>('idle')
 const scrolledDown = ref(false)
 
-function attemptJoinWaitlist() {
+async function attemptJoinWaitlist() {
   formState.value = 'processing'
 
-  setTimeout(() => {
-    formState.value = 'done'
-  }, 1500)
+  await fetch('https://api.advicehome.co.uk/csrf-cookie', { method: 'post' })
+
+  await fetch('https://api.advicehome.co.uk/waitlist/join', {
+    method: 'post',
+    credentials: 'include',
+    body: JSON.stringify({
+      email: email.value,
+    }),
+  })
+
+  formState.value = 'done'
 }
 
 const listener = () => {
@@ -187,6 +197,7 @@ function focusWaitlistInput() {
               <input
                 id="email"
                 ref="waitlist"
+                v-model="email"
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/5 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
@@ -516,6 +527,7 @@ function focusWaitlistInput() {
               <input
                 id="email-lower"
                 ref="waitlist"
+                v-model="email"
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/10 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto appearance-none"
                 placeholder="email@company.co.uk"
