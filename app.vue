@@ -534,7 +534,9 @@ function focusWaitlistInput() {
     </div>
   </section>
 
-  <footer class="bg-slate-50 border-t border-slate-200 text-[13px] text-slate-500">
+  <footer
+    class="bg-gradient-to-b from-white to-slate-50 via-white border-t border-slate-200 text-[13px] text-slate-500"
+  >
     <div class="max-w-[1350px] mx-auto px-8 py-8 flex items-center">
       <div class="">
         <svg viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-slate-500 w-8">
