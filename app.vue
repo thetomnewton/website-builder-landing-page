@@ -30,6 +30,7 @@ useHead({
       name: 'og:description',
       content: 'Build a modern and beautiful website for your financial advice firm with ease',
     },
+    { name: 'theme-color', content: '#ffffff' },
     { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
     { property: 'twitter:site', content: '@advicehome_' },
     { property: 'twitter:creator', content: '@advicehome_' },
