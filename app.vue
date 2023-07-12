@@ -22,7 +22,22 @@ useHead({
   title: 'Advicehome | Professional & modern websites for financial advisers',
   meta: [
     { name: 'description', content: 'Build a modern and beautiful website for your financial advice firm with ease' },
+    {
+      name: 'twitter:description',
+      content: 'Build a modern and beautiful website for your financial advice firm with ease',
+    },
+    {
+      name: 'og:description',
+      content: 'Build a modern and beautiful website for your financial advice firm with ease',
+    },
     { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
+    { property: 'twitter:site', content: '@advicehome_' },
+    { property: 'twitter:creator', content: '@advicehome_' },
+    { property: 'og:site_name', content: 'Advicehome' },
+    { property: 'og:type', content: 'website' },
+    { property: 'twitter:card', content: 'summary_large_image' },
+    { property: 'twitter:image', content: 'https://www.advicehome.co.uk/social.png' },
+    { property: 'og:image', content: 'https://www.advicehome.co.uk/social.png' },
   ],
   htmlAttrs: {
     lang: 'en',
