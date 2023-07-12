@@ -159,7 +159,7 @@ function focusWaitlistInput() {
 
           <p class="md:leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
-            for financial advisers and created by experts.
+            for financial advisers and created by expert designers.
           </p>
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
@@ -174,7 +174,6 @@ function focusWaitlistInput() {
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/5 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
-                autofocus
                 required
               />
 
@@ -504,7 +503,6 @@ function focusWaitlistInput() {
                 type="email"
                 class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/10 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
-                autofocus
                 required
               />
 
