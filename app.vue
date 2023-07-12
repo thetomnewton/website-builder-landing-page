@@ -172,7 +172,7 @@ function focusWaitlistInput() {
                 id="email"
                 ref="waitlist"
                 type="email"
-                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/5 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/5 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
                 required
               />
@@ -455,7 +455,7 @@ function focusWaitlistInput() {
         <h2
           class="text-slate-900 font-extrabold text-3xl md:text-4xl leading-[40px] tracking-tight text-center xl:text-left"
         >
-          Enjoy
+          Get
           <span class="bg-gradient-to-b from-sky-500 to-blue-700 bg-clip-text text-transparent"
             >powerful analytics</span
           >
@@ -501,7 +501,7 @@ function focusWaitlistInput() {
                 id="email-lower"
                 ref="waitlist"
                 type="email"
-                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 border-none rounded-lg shadow ring-1 ring-slate-950/10 flex-1 outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
+                class="sm:text-sm sm:text-[1rem] text-slate-800 leading-5 px-4 py-3 rounded-lg shadow ring-1 ring-slate-950/10 flex-1 focus:ring-2 focus:ring-blue-500 w-full md:w-auto"
                 placeholder="email@company.co.uk"
                 required
               />
