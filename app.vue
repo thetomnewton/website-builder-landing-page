@@ -524,7 +524,7 @@ function focusWaitlistInput() {
   <section class="pt-8 pb-20">
     <div class="max-w-[1300px] mx-auto px-8 xl:px-0">
       <div
-        class="px-12 py-8 bg-gradient-to-b from-white to-slate-50 via-white shadow-md rounded-3xl ring-1 ring-slate-950/10"
+        class="px-8 sm:px-12 py-8 bg-gradient-to-b from-white to-slate-50 via-white shadow-md rounded-3xl ring-1 ring-slate-950/10"
       >
         <div class="xl:flex xl:items-center">
           <div class="xl:pr-10">
@@ -575,7 +575,7 @@ function focusWaitlistInput() {
   <footer
     class="bg-gradient-to-b from-white to-slate-50 via-white border-t border-slate-200 text-[13px] text-slate-500"
   >
-    <div class="max-w-[1350px] mx-auto px-8 py-8 flex items-center">
+    <div class="max-w-[1350px] mx-auto px-8 py-8 sm:flex sm: items-center">
       <div class="">
         <svg viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-slate-500 w-8">
           <path
@@ -587,20 +587,20 @@ function focusWaitlistInput() {
         </svg>
       </div>
 
-      <div class="ml-auto flex items-center">
-        <span>&copy; 2023 Advicehome</span>
+      <div class="sm:ml-auto sm:flex sm:items-center sm:mt-0 mt-6">
+        <div>&copy; 2023 Advicehome</div>
         <a
           href="//twitter.com/AdvicehomeApp"
           target="_blank"
           rel="noreferrer"
-          class="ml-6 hover:underline text-slate-700 font-medium inline-flex items-center"
+          class="sm:ml-6 mt-3 sm:mt-0 hover:underline text-slate-700 font-medium flex items-center"
         >
           <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-slate-400 mr-2">
             <path
               d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 20 3.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743 11.65 11.65 0 0 1-8.457-4.287 4.106 4.106 0 0 0 1.27 5.477A4.073 4.073 0 0 1 .8 7.713v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 0 16.407a11.615 11.615 0 0 0 6.29 1.84"
             ></path>
           </svg>
-          <span>Follow us on Twitter</span>
+          <div>Follow us on Twitter</div>
         </a>
       </div>
     </div>
