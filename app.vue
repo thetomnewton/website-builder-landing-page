@@ -184,11 +184,11 @@ function focusWaitlistInput() {
     <div class="max-w-[1350px] mx-auto px-8 pb-24">
       <div class="flex w-full items-center md:pt-[150px] pt-[120px]">
         <div class="max-w-[650px] md:min-w-[650px] mx-auto">
-          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-950 lg:leading-[50px] tracking-tight">
+          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-950 lg:leading-[56px] tracking-tight">
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
-          <p class="md:leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
+          <p class="md:leading-[30px] text-slate-600 mt-5 max-w-[570px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
             for financial advisers and created by expert designers.
           </p>
@@ -449,37 +449,37 @@ function focusWaitlistInput() {
       <div
         class="mt-16 lg:flex flex-wrap text-slate-500 font-medium leading-6 max-w-[700px] mx-auto lg:max-w-none space-y-6 lg:space-y-0"
       >
-        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <MagnifyingGlassIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Search Engine Optimisation (SEO)</span>
           <span>. Best practices to help you rank better in Google.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <PhotoIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Image optimisation</span>
           <span>. Any images you use will be auto-adjusted for peak performance.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-3">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <ShareIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Social media sharing previews</span>
           <span>. Your site will look great, no matter where it gets shared.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <UserGroupIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Accessibility</span>
           <span>. Your site will follow accessibility best practices and be welcoming for all.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <ShieldCheckIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Security</span>
           <span>. Get automatic HTTPS included and spam protection on your contact forms.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-2">
+        <div class="lg:w-1/3 lg:px-4 lg:py-4">
           <DocumentDuplicateIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Multiple versions</span>
           <span>. Keep your current site up and running while working on a new one.</span>
