@@ -195,7 +195,7 @@ function focusWaitlistInput() {
 
           <form @submit.prevent="attemptJoinWaitlist" class="mt-8 max-w-[600px]">
             <label for="email" class="inline-block font-semibold mb-2 text-sm text-slate-800">
-              Join the waitlist for early access:
+              Join the waitlist for early access and discounts:
             </label>
 
             <div class="md:flex md:items-center md:space-x-4">
@@ -529,9 +529,7 @@ function focusWaitlistInput() {
         <div class="xl:flex xl:items-center">
           <div class="xl:pr-10">
             <div class="font-medium text-lg">Grow your business with a stunning Advicehome website.</div>
-            <div class="font-medium text-lg text-slate-500">
-              Join the waitlist for early access and product updates.
-            </div>
+            <div class="font-medium text-lg text-slate-500">Join the waitlist for early access and discounts:</div>
           </div>
 
           <div class="mt-6 xl:mt-0 xl:ml-auto flex-1">
