@@ -174,7 +174,7 @@ function focusWaitlistInput() {
 
   <section class="overflow-hidden bg-slate-50 border-b border-slate-200 relative">
     <div class="absolute inset-x-0 top-0 z-10 overflow-hidden pl-[50%] lg:hidden pointer-events-none">
-      <nuxt-img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
+      <img src="/beams-simple.png" alt="" class="-ml-[39rem] -mt-[80px] w-[113.125rem] max-w-none" />
     </div>
 
     <div
@@ -184,11 +184,11 @@ function focusWaitlistInput() {
     <div class="max-w-[1350px] mx-auto px-8 pb-24">
       <div class="flex w-full items-center md:pt-[150px] pt-[120px]">
         <div class="max-w-[650px] md:min-w-[650px] mx-auto">
-          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-950 lg:leading-[56px] tracking-tight">
+          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-950 lg:leading-[50px] tracking-tight">
             Create a beautiful, modern adviser website with complete ease.
           </h1>
 
-          <p class="md:leading-[30px] text-slate-600 mt-5 max-w-[570px] text-lg">
+          <p class="md:leading-[30px] text-slate-600 mt-4 max-w-[570px] text-lg">
             Stun your clients, convert more leads and supercharge your online presence. A brand new platform designed
             for financial advisers and created by expert designers.
           </p>
@@ -242,19 +242,19 @@ function focusWaitlistInput() {
         <div class="hidden lg:flex">
           <div class="relative flex-shrink-0 p-3">
             <div class="relative z-10 rounded-lg ring-1 ring-slate-900/5 shadow-xl overflow-hidden">
-              <nuxt-img src="/best-ifa-1.png" alt="" class="h-[369px] w-[320px]" />
+              <img src="/best-ifa-1.png" alt="" class="h-[369px] w-[320px]" />
             </div>
           </div>
 
           <div class="relative flex-shrink-0 mt-14 p-3">
             <div class="relative z-10 rounded-lg ring-1 ring-slate-900/5 shadow-xl overflow-hidden pb-8 bg-white">
-              <nuxt-img src="/sterling-wisdom-1.png" alt="" class="h-[337px] w-[320px]" />
+              <img src="/sterling-wisdom-1.png" alt="" class="h-[337px] w-[320px]" />
             </div>
           </div>
 
           <div class="relative flex-shrink-0 p-3">
             <div class="relative z-10 rounded-lg ring-1 ring-slate-900/5 shadow-xl overflow-hidden pb-8 bg-white">
-              <nuxt-img src="/watson-smith-1.png" alt="" class="h-[337px] w-[320px]" />
+              <img src="/watson-smith-1.png" alt="" class="h-[337px] w-[320px]" />
             </div>
           </div>
         </div>
@@ -432,7 +432,7 @@ function focusWaitlistInput() {
 
         <div class="w-full lg:w-auto lg:flex-1">
           <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
-            <nuxt-img :src="`/showcase/${selectedPreview}.png`" alt="Showcase image" width="660" height="645" />
+            <img :src="`/showcase/${selectedPreview}.png`" alt="Showcase image" width="660" height="645" />
           </div>
         </div>
       </div>
@@ -449,37 +449,37 @@ function focusWaitlistInput() {
       <div
         class="mt-16 lg:flex flex-wrap text-slate-500 font-medium leading-6 max-w-[700px] mx-auto lg:max-w-none space-y-6 lg:space-y-0"
       >
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <MagnifyingGlassIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Search Engine Optimisation (SEO)</span>
           <span>. Best practices to help you rank better in Google.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <PhotoIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Image optimisation</span>
           <span>. Any images you use will be auto-adjusted for peak performance.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-3">
           <ShareIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Social media sharing previews</span>
           <span>. Your site will look great, no matter where it gets shared.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <UserGroupIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Accessibility</span>
           <span>. Your site will follow accessibility best practices and be welcoming for all.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <ShieldCheckIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Security</span>
           <span>. Get automatic HTTPS included and spam protection on your contact forms.</span>
         </div>
 
-        <div class="lg:w-1/3 lg:px-4 lg:py-4">
+        <div class="lg:w-1/3 lg:px-4 lg:py-2">
           <DocumentDuplicateIcon class="text-black inline w-5 h-5 mr-1.5" />
           <span class="text-black">Multiple versions</span>
           <span>. Keep your current site up and running while working on a new one.</span>
