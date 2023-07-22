@@ -60,7 +60,7 @@ async function attemptJoinWaitlist() {
 
   try {
     await fetch('https://api.advicehome.co.uk/sanctum/csrf-cookie')
-    await fetch('https://api.advicehome.co.uk/api/waitlist/join', {
+    const response = await fetch('https://api.advicehome.co.uk/api/waitlist/join', {
       method: 'post',
       credentials: 'include',
       headers: {
@@ -71,7 +71,9 @@ async function attemptJoinWaitlist() {
         email: email.value,
       }),
     })
-    formState.value = 'done'
+
+    if (response.status >= 200 && response.status < 300) formState.value = 'done'
+    else formState.value = 'error'
   } catch (e) {
     formState.value = 'error'
   }
