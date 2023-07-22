@@ -14,6 +14,7 @@ import {
   UserGroupIcon,
   ShareIcon,
   PhotoIcon,
+  FingerPrintIcon,
 } from '@heroicons/vue/24/outline'
 
 import { CheckIcon, ExclamationCircleIcon } from '@heroicons/vue/20/solid'
@@ -83,7 +84,7 @@ const listener = () => {
 onMounted(() => document.addEventListener('scroll', listener))
 onUnmounted(() => document.removeEventListener('scroll', listener))
 
-const selectedPreview = ref<'modern' | 'corporate' | 'family'>('modern')
+const selectedPreview = ref<'modern' | 'corporate' | 'family' | 'sleek'>('modern')
 const mobileMenuOpen = ref(false)
 
 const waitlist = ref<HTMLElement | null>(null)
@@ -352,6 +353,16 @@ function focusWaitlistInput() {
             <button
               type="button"
               class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
+              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'sleek' }"
+              @click="selectedPreview = 'sleek'"
+            >
+              <UsersIcon class="w-5 h-5 mr-2" />
+              <span>Sleek</span>
+            </button>
+
+            <button
+              type="button"
+              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
               :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'family' }"
               @click="selectedPreview = 'family'"
             >
@@ -369,17 +380,18 @@ function focusWaitlistInput() {
               class="text-lg flex items-center mb-1 transition-all"
               :class="[
                 selectedPreview === 'modern'
-                  ? 'text-slate-900 font-semibold'
+                  ? 'text-blue-600 font-semibold'
                   : 'text-slate-500 group-hover:text-slate-700 font-medium',
               ]"
             >
               <ComputerDesktopIcon class="w-5 h-5 mr-1.5" />
               <span>Modern</span>
+              <span v-if="selectedPreview === 'modern'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
             </div>
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'modern' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600']"
+              :class="[selectedPreview === 'modern' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
             >
               Impress your clients with a sleek and modern impression.
             </p>
@@ -390,21 +402,42 @@ function focusWaitlistInput() {
               class="text-lg flex items-center mb-1 transition-all"
               :class="[
                 selectedPreview === 'corporate'
-                  ? 'text-slate-900 font-semibold'
+                  ? 'text-blue-600 font-semibold'
                   : 'text-slate-500 group-hover:text-slate-700 font-medium',
               ]"
             >
               <BuildingOffice2Icon class="w-5 h-5 mr-1.5" />
               <span>Corporate</span>
+              <span v-if="selectedPreview === 'corporate'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
             </div>
 
             <p
               class="transition-all"
-              :class="[
-                selectedPreview === 'corporate' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600',
-              ]"
+              :class="[selectedPreview === 'corporate' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
             >
               Demonstrate your professionalism and industry expertise to your clients.
+            </p>
+          </div>
+
+          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'sleek'">
+            <div
+              class="text-lg flex items-center mb-1 transition-all"
+              :class="[
+                selectedPreview === 'sleek'
+                  ? 'text-blue-600 font-semibold'
+                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
+              ]"
+            >
+              <FingerPrintIcon class="w-5 h-5 mr-1.5" />
+              <span>Sleek</span>
+              <span v-if="selectedPreview === 'sleek'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
+            </div>
+
+            <p
+              class="transition-all"
+              :class="[selectedPreview === 'sleek' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
+            >
+              For firms looking for a darker and more exclusive brand, with intricate details.
             </p>
           </div>
 
@@ -413,17 +446,18 @@ function focusWaitlistInput() {
               class="text-lg flex items-center mb-1 transition-all"
               :class="[
                 selectedPreview === 'family'
-                  ? 'text-slate-900 font-semibold'
+                  ? 'text-blue-600 font-semibold'
                   : 'text-slate-500 group-hover:text-slate-700 font-medium',
               ]"
             >
               <UsersIcon class="w-5 h-5 mr-1.5" />
               <span>Family</span>
+              <span v-if="selectedPreview === 'family'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
             </div>
 
             <p
               class="transition-all"
-              :class="[selectedPreview === 'family' ? 'text-slate-700' : 'text-slate-500 group-hover:text-slate-600']"
+              :class="[selectedPreview === 'family' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
             >
               For firms wanting a more family-focused and goal-oriented feel.
             </p>
