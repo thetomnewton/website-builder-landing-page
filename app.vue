@@ -84,7 +84,6 @@ const listener = () => {
 onMounted(() => document.addEventListener('scroll', listener))
 onUnmounted(() => document.removeEventListener('scroll', listener))
 
-const selectedPreview = ref<'modern' | 'corporate' | 'family' | 'sleek'>('modern')
 const mobileMenuOpen = ref(false)
 
 const waitlist = ref<HTMLElement | null>(null)
@@ -327,146 +326,68 @@ function focusWaitlistInput() {
         meet the team, and more.
       </p>
 
-      <div class="mt-10 flex items-center flex-wrap mx-auto max-w-[1000px]">
-        <div class="w-full flex justify-center lg:hidden mb-8">
-          <div class="rounded-full border border-slate-300 flex items-center p-1 gap-x-1">
-            <button
-              type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
-              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'modern' }"
-              @click="selectedPreview = 'modern'"
-            >
-              <ComputerDesktopIcon class="w-5 h-5 mr-2" />
-              <span>Modern</span>
-            </button>
+      <div class="mt-10 mb-4 text-center font-medium">Choose from dozens of templates including:</div>
 
-            <button
-              type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
-              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'corporate' }"
-              @click="selectedPreview = 'corporate'"
-            >
-              <BuildingOffice2Icon class="w-5 h-5 mr-2" />
-              <span>Corporate</span>
-            </button>
-
-            <button
-              type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
-              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'sleek' }"
-              @click="selectedPreview = 'sleek'"
-            >
-              <UsersIcon class="w-5 h-5 mr-2" />
-              <span>Sleek</span>
-            </button>
-
-            <button
-              type="button"
-              class="inline-flex items-center appearance-none text-sm font-medium px-[10px] py-1.5 rounded-full"
-              :class="{ 'bg-blue-600 text-white shadow': selectedPreview === 'family' }"
-              @click="selectedPreview = 'family'"
-            >
-              <UsersIcon class="w-5 h-5 mr-2" />
-              <span>Family</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="hidden lg:flex flex-col max-w-[340px] -mt-5">
-          <div class="text-slate-700 text-sm ml-4">Example websites:</div>
-
-          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'modern'">
-            <div
-              class="text-lg flex items-center mb-1 transition-all"
-              :class="[
-                selectedPreview === 'modern'
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
-              ]"
-            >
-              <ComputerDesktopIcon class="w-5 h-5 mr-1.5" />
-              <span>Modern</span>
-              <span v-if="selectedPreview === 'modern'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
+      <div class="flex-wrap mx-auto max-w-[1000px]">
+        <div class="w-full lg:w-auto lg:flex-1 flex flex-wrap">
+          <div class="lg:p-3 lg:w-1/2">
+            <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+              <img :src="`/showcase/modern.png`" alt="Showcase image" />
             </div>
 
-            <p
-              class="transition-all"
-              :class="[selectedPreview === 'modern' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
-            >
-              Impress your clients with a sleek and modern impression.
-            </p>
-          </div>
+            <div class="p-4 cursor-pointer group">
+              <div class="text-lg flex items-center mb-1 transition-all font-semibold">
+                <ComputerDesktopIcon class="w-5 h-5 mr-1.5" />
+                <span>Modern</span>
+              </div>
 
-          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'corporate'">
-            <div
-              class="text-lg flex items-center mb-1 transition-all"
-              :class="[
-                selectedPreview === 'corporate'
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
-              ]"
-            >
-              <BuildingOffice2Icon class="w-5 h-5 mr-1.5" />
-              <span>Corporate</span>
-              <span v-if="selectedPreview === 'corporate'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
+              <p class="transition-all">Impress your clients with a sleek and modern brand, with splashes of colour.</p>
+            </div>
+          </div>
+          <div class="lg:p-3 lg:w-1/2">
+            <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+              <img :src="`/showcase/corporate.png`" alt="Showcase image" />
             </div>
 
-            <p
-              class="transition-all"
-              :class="[selectedPreview === 'corporate' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
-            >
-              Demonstrate your professionalism and industry expertise to your clients.
-            </p>
-          </div>
+            <div class="p-4 cursor-pointer group">
+              <div class="text-lg flex items-center mb-1 transition-all font-semibold">
+                <BuildingOffice2Icon class="w-5 h-5 mr-1.5" />
+                <span>Corporate</span>
+              </div>
 
-          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'sleek'">
-            <div
-              class="text-lg flex items-center mb-1 transition-all"
-              :class="[
-                selectedPreview === 'sleek'
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
-              ]"
-            >
-              <FingerPrintIcon class="w-5 h-5 mr-1.5" />
-              <span>Sleek</span>
-              <span v-if="selectedPreview === 'sleek'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
+              <p class="transition-all">Demonstrate your professionalism and industry expertise to your clients.</p>
+            </div>
+          </div>
+          <div class="lg:p-3 lg:w-1/2">
+            <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+              <img :src="`/showcase/sleek.png`" alt="Showcase image" />
             </div>
 
-            <p
-              class="transition-all"
-              :class="[selectedPreview === 'sleek' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
-            >
-              For firms looking for a darker and more exclusive brand, with intricate details.
-            </p>
+            <div class="p-4 cursor-pointer group">
+              <div class="text-lg flex items-center mb-1 transition-all font-semibold">
+                <FingerPrintIcon class="w-5 h-5 mr-1.5" />
+                <span>Sleek</span>
+              </div>
+
+              <p class="transition-all">
+                For firms looking for a darker and more exclusive brand, with intricate details.
+              </p>
+            </div>
           </div>
 
-          <div class="p-4 cursor-pointer group" @click="selectedPreview = 'family'">
-            <div
-              class="text-lg flex items-center mb-1 transition-all"
-              :class="[
-                selectedPreview === 'family'
-                  ? 'text-blue-600 font-semibold'
-                  : 'text-slate-500 group-hover:text-slate-700 font-medium',
-              ]"
-            >
-              <UsersIcon class="w-5 h-5 mr-1.5" />
-              <span>Family</span>
-              <span v-if="selectedPreview === 'family'" class="h-2 w-2 rounded-full bg-blue-500 ml-[10px]"></span>
+          <div class="lg:p-3 lg:w-1/2">
+            <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
+              <img :src="`/showcase/family.png`" alt="Showcase image" />
             </div>
 
-            <p
-              class="transition-all"
-              :class="[selectedPreview === 'family' ? 'text-blue-600' : 'text-slate-500 group-hover:text-slate-600']"
-            >
-              For firms wanting a more family-focused and goal-oriented feel.
-            </p>
-          </div>
-        </div>
+            <div class="p-4 cursor-pointer group">
+              <div class="text-lg flex items-center mb-1 transition-all font-semibold">
+                <UsersIcon class="w-5 h-5 mr-1.5" />
+                <span>Family</span>
+              </div>
 
-        <div class="w-full lg:w-auto lg:flex-1">
-          <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
-            <img :src="`/showcase/${selectedPreview}.png`" alt="Showcase image" width="660" height="645" />
+              <p class="transition-all">For firms wanting a more family-focused and goal-oriented feel.</p>
+            </div>
           </div>
         </div>
       </div>
