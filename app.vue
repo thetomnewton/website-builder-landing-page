@@ -73,9 +73,23 @@ async function attemptJoinWaitlist() {
     })
 
     if (response.status >= 200 && response.status < 300) formState.value = 'done'
-    else formState.value = 'error'
+    else handleErrorResponse(response)
   } catch (e) {
     formState.value = 'error'
+  }
+}
+
+function handleErrorResponse(response: Response) {
+  if (response.status >= 500) {
+    alert(
+      'Sorry, something went wrong on our end. Please try again shortly, or contact us via Twitter for help: @AdvicehomeApp'
+    )
+  } else if (response.status === 422) {
+    alert(
+      'Something went wrong adding this address to the waitlist. Please try a different one, or contact us for help on Twitter: @AdvicehomeApp'
+    )
+  } else {
+    alert('Sorry, something went wrong. Please try again shortly, or contact us for help on Twitter: @AdvicehomeApp')
   }
 }
 
