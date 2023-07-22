@@ -139,7 +139,7 @@ function focusWaitlistInput() {
 
   <header
     class="fixed inset-x-0 top-0 z-30 transition-all"
-    :class="{ 'bg-white/50 backdrop-blur shadow-sm': scrolledDown }"
+    :class="{ 'bg-white/80 backdrop-blur shadow-sm': scrolledDown }"
   >
     <div class="flex items-center mx-auto max-w-[1350px] px-8">
       <a href="#" class="font-bold py-6 inline-flex text-lg" alt="Logo">
@@ -328,9 +328,9 @@ function focusWaitlistInput() {
 
       <div class="mt-10 mb-4 text-center font-medium">Choose from dozens of templates including:</div>
 
-      <div class="flex-wrap mx-auto max-w-[1000px]">
+      <div class="flex-wrap mx-auto max-w-[1300px]">
         <div class="w-full lg:w-auto lg:flex-1 flex flex-wrap">
-          <div class="lg:p-3 lg:w-1/2">
+          <div class="lg:py-4 lg:px-4 py-6 lg:w-1/2">
             <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
               <img :src="`/showcase/modern.png`" alt="Showcase image" />
             </div>
@@ -344,7 +344,7 @@ function focusWaitlistInput() {
               <p class="transition-all">Impress your clients with a sleek and modern brand, with splashes of colour.</p>
             </div>
           </div>
-          <div class="lg:p-3 lg:w-1/2">
+          <div class="lg:py-4 lg:px-4 py-6 lg:w-1/2">
             <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
               <img :src="`/showcase/corporate.png`" alt="Showcase image" />
             </div>
@@ -358,7 +358,7 @@ function focusWaitlistInput() {
               <p class="transition-all">Demonstrate your professionalism and industry expertise to your clients.</p>
             </div>
           </div>
-          <div class="lg:p-3 lg:w-1/2">
+          <div class="lg:py-4 lg:px-4 py-6 lg:w-1/2">
             <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
               <img :src="`/showcase/sleek.png`" alt="Showcase image" />
             </div>
@@ -375,7 +375,7 @@ function focusWaitlistInput() {
             </div>
           </div>
 
-          <div class="lg:p-3 lg:w-1/2">
+          <div class="lg:py-4 lg:px-4 py-6 lg:w-1/2">
             <div class="rounded-3xl ring-1 ring-slate-900/5 shadow-lg overflow-hidden">
               <img :src="`/showcase/family.png`" alt="Showcase image" />
             </div>
