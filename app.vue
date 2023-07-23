@@ -80,6 +80,8 @@ async function attemptJoinWaitlist() {
 }
 
 function handleErrorResponse(response: Response) {
+  formState.value = 'error'
+
   if (response.status >= 500) {
     alert(
       'Sorry, something went wrong on our end. Please try again shortly, or contact us via Twitter for help: @AdvicehomeApp'
